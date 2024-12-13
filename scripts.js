@@ -31,7 +31,31 @@ toString() {
 
       }
     } 
+    class stores {
+constructor() { 
+    this.inventory = [];
+}
+    addProduct(product) {
+        this.inventory.push(product);
+      }
     
+      getInventoryValue() {
+        return this.inventory.reduce((total, product) => total + product.getTotalValue(), 0);
+      }
+    
+      findProductByName(name) {
+        return this.inventory.find(product => product.name === name) || null;
+      }
+    }
+    
+
+
+
+
+
+    
+
+
 
 
 
