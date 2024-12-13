@@ -12,6 +12,13 @@ toString() {
     return `Product: ${this.name}, Price: $${this.price.toFixed(2)}, Quantity: ${this.quantity}`;
   }
 
+  static applyDiscount(products, discount) {
+    products.forEach(product => {
+      product.price -= product.price * discount;
+    });
+  }
+
+
 } 
   class PerishableProductProperties extends ProductProperties {
     constructor(name, price, quantity, expirationDate) {
@@ -21,11 +28,10 @@ toString() {
   
       toString() {
         return `${super.toString()}, Expiration Date: ${this.expirationDate}`;
+
       }
-    }
+    } 
     
-
-
 
 
 
