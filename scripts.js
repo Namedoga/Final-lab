@@ -4,7 +4,9 @@ this.name = name;
 this.name = price;
 this.name = quantity;
 }
-
+getTotalValue() {
+    return this.price * this.quantity;
+  }
 
 
 
