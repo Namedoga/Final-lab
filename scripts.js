@@ -1,3 +1,8 @@
+
+
+
+// Added class ProductProperties which created to three products, product one and two and bread. 
+// Each one has the values given in the constructor: name, quantity and price 
 class ProductProperties { 
 constructor(name, quantity, price){ 
 this.name = name; 
@@ -18,8 +23,11 @@ toString() {
     });
   }
 
-
-} 
+// Added class PerishableProductProperties extends to previous class ProductProperties, 
+//which becomes a subclass. 
+//Using super PPP inherits properties of ProductProperties  
+// Also adds expirationDate
+}// milk and cheese are instances of PPP 
   class PerishableProductProperties extends ProductProperties {
     constructor(name, price, quantity, expirationDate) {
     super(name,price,quantity )
@@ -48,8 +56,12 @@ constructor() {
       }
     }
     
-
-
+//Task one: 
+    const product1 = new ProductProperties("Grape", 2.5, 50);
+    const product2 = new ProductProperties("Mango", 1.2, 30);
+    const milk = new PerishableProductProperties("Milk", 1.5, 10, "2024-12-31");
+    const cheese = new PerishableProductProperties("Cheese", 3.75, 5, "2025-01-15");
+    const bread = new ProductProperties("Bread", 2.0, 20);
 
 
 
