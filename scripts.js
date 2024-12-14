@@ -82,6 +82,12 @@ class Store {
     store.addProduct(cheese);
     store.addProduct(bread);
     
+//Searches for a product in the inventory by declaring a const var searchName as milk
+// then calls "findProductByName" method of then store class 
+//the if statement checks if "foundProduct" is Null or a product 
+// if found then logs to console if not the prints "not found" 
+
+
 // Find and print details of a specific product
 const searchName = "Milk";
 const foundProduct = store.findProductByName(searchName);
