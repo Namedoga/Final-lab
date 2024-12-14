@@ -4,11 +4,11 @@
 // Added class ProductProperties which created to three products, product one and two and bread. 
 // Each one has the values given in the constructor: name, quantity and price 
 class ProductProperties { 
-constructor(name, quantity, price){ 
-this.name = name; 
-this.name = price;
-this.name = quantity;
-}
+  constructor(name, quantity, price) { 
+  this.name = name; 
+  this.quantity = quantity; 
+ this.price = price; 
+  }
 getTotalValue() {
     return this.price * this.quantity;
   }
@@ -30,7 +30,7 @@ toString() {
 }// milk and cheese are instances of PPP 
   class PerishableProductProperties extends ProductProperties {
     constructor(name, price, quantity, expirationDate) {
-    super(name,price,quantity )
+    super(name,quantity,price )
         this.expirationDate = expirationDate;
       }   
   
