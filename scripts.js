@@ -76,7 +76,7 @@ class Product {
   }
 }
 
-module.exports = { Store, Product }; // Export the classes
+
 
     
 //Task one: 
