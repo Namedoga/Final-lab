@@ -39,22 +39,45 @@ toString() {
 
       }
     } 
-    class stores {
-constructor() { 
-    this.inventory = [];
+
+// Created a store class that has PerishableProductProperties and ProductProperties in its inventory 
+// inventory is an array that stores the products 
+// using addProduct(product) and "push" we can add products 
+// using getInventoryValue() and "reduce" method to sum up the total 
+// using findProductByName(name) we can find products by name or send back "null"
+
+class Store {
+  constructor() { 
+      this.inventory = [];
+  }
+
+  addProduct(product) {
+      this.inventory.push(product);
+  }
+
+  getInventoryValue() {
+      return this.inventory.reduce((total, product) => total + product.getTotalValue(), 0);
+  }
+
+  findProductByName(name) {
+      return this.inventory.find(product => product.name === name) || null;
+  }
 }
-    addProduct(product) {
-        this.inventory.push(product);
-      }
-    
-      getInventoryValue() {
-        return this.inventory.reduce((total, product) => total + product.getTotalValue(), 0);
-      }
-    
-      findProductByName(name) {
-        return this.inventory.find(product => product.name === name) || null;
-      }
-    }
+
+class Product {
+  constructor(name, price, quantity) {
+      this.name = name;
+      this.price = price;
+      this.quantity = quantity;
+  }
+
+  getTotalValue() {
+      return this.price * this.quantity;
+  }
+}
+
+module.exports = { Store, Product }; // Export the classes
+
     
 //Task one: 
     const product1 = new ProductProperties("Grape", 2.5, 50);
@@ -71,6 +94,14 @@ constructor() {
     store.addProduct(cheese);
     store.addProduct(bread);
     
+// Find and print details of a specific product
+const searchName = "Milk";
+const foundProduct = store.findProductByName(searchName);
+if (foundProduct) {
+  console.log(`Details '${searchName}':`, foundProduct.toString());
+} else {
+  console.log(`Product '${searchName}' not found.`);
+}
 
     
 
