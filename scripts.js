@@ -1,6 +1,4 @@
 
-
-
 // Added class ProductProperties which created to three products, product one and two and bread. 
 // Each one has the values given in the constructor: name, quantity and price 
 class ProductProperties { 
@@ -85,6 +83,16 @@ class Store {
     store.addProduct(milk);
     store.addProduct(cheese);
     store.addProduct(bread);
+
+//before
+    console.log("before discount:", store.getInventoryValue());
+
+ //after
+    ProductProperties.applyDiscount(store.inventory, 0.15);
+    
+    console.log("after discount:", store.getInventoryValue());
+    
+
     
 //Searches for a product in the inventory by declaring a const var searchName as milk
 // then calls "findProductByName" method of then store class 
