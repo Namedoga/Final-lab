@@ -66,7 +66,8 @@ class Store {
 
 
 
-    
+//creates 2 new instance of the ProductProperties called named product one and two 
+// Also creates parameters for those new instances
 //Task one: 
     const product1 = new ProductProperties("Grape", 2.5, 50);
     const product2 = new ProductProperties("Mango", 1.2, 30);
