@@ -84,7 +84,6 @@ class Store {
     store.addProduct(cheese);
     store.addProduct(bread);
 
-
 //calculates and displays the total value of all products in the store's inventory before and after any discounts are applied.
 //before
     console.log("before discount:", store.getInventoryValue());
