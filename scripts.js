@@ -59,11 +59,18 @@ constructor() {
 //Task one: 
     const product1 = new ProductProperties("Grape", 2.5, 50);
     const product2 = new ProductProperties("Mango", 1.2, 30);
-    const milk = new PerishableProductProperties("Milk", 1.5, 10, "2024-12-31");
-    const cheese = new PerishableProductProperties("Cheese", 3.75, 5, "2025-01-15");
+    const milk = new PerishableProductProperties("Milk", 1.5, 10, "2024-04-18");
+    const cheese = new PerishableProductProperties("Cheese", 3.75, 5, "2025-04-18");
     const bread = new ProductProperties("Bread", 2.0, 20);
-
-
+ 
+ // Add these products to a Store object.
+    const store = new Store();
+    store.addProduct(product1);
+    store.addProduct(product2);
+    store.addProduct(milk);
+    store.addProduct(cheese);
+    store.addProduct(bread);
+    
 
     
 
