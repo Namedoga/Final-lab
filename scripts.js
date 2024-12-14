@@ -75,6 +75,9 @@ class Store {
     const cheese = new PerishableProductProperties("Cheese", 3.75, 5, "2025-04-18");
     const bread = new ProductProperties("Bread", 2.0, 20);
  
+//Created new instances of the store class and assigns it to the const var 
+// initializes an empty inventory array (this.inventory = [];)
+
  // Add these products to a Store object.
     const store = new Store();
     store.addProduct(product1);
